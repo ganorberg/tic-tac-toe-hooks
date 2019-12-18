@@ -22,7 +22,7 @@ const wins = () => {
     ];
 };
 
-const sameLetter = (cells) => {
+const lettersMatch = (cells) => {
     if (cells.includes("-")) {
         return false;
     }
@@ -30,7 +30,7 @@ const sameLetter = (cells) => {
     return cells[0] === cells[1] && cells[1] === cells[2];
 };
 
-const isWin = (board) => {
+export const isWin = (board) => {
     const winCoordinates = wins();
     for (let i = 0; i < winCoordinates.length; i++) {
         const winCoordinate = winCoordinates[i];
@@ -39,7 +39,8 @@ const isWin = (board) => {
         const secondCell = board[winCoordinate[1]];
         const thirdCell = board[winCoordinate[2]];
         const boardCells = [firstCell, secondCell, thirdCell];
-        if (sameLetter(boardCells)) {
+
+        if (lettersMatch(boardCells)) {
             return true;
         }
     }
@@ -47,9 +48,4 @@ const isWin = (board) => {
     return false;
 };
 
-const isDraw = (board) => !board.includes("-");
-const isEnd = (board) => {
-    return isWin(board) || isDraw(board);
-}
-
-export default isEnd;
+export const isDraw = (board, playerWon) => !playerWon && !board.includes("-");
