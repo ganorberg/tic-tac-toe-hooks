@@ -1,3 +1,9 @@
+# Tic Tac Toe
+
+Playing around with new React features to compare to how I built Tic Tac Toe 2 years ago: https://github.com/ganorberg/react-tic-tac-toe
+
+# Create React App Documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
