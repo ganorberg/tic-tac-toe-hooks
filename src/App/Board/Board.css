@@ -1,0 +1,6 @@
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #2196f3;
+  padding: 10px;
+}

@@ -1,0 +1,9 @@
+.end-game-message-container {
+  display: flex;
+  justify-content: center;
+}
+
+.end-game-message {
+  background-color: red;
+  color: white;
+}
